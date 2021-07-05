@@ -69,13 +69,6 @@ class Path:
         
         
         
-print(Path().get("/../../Docu.com"))
-bb = Path().importer("/../deneme/aa.Aa")
-print(sys.path)
-#bb().deneme()
-#bb.Aa()
-bb().deneme()
-        
 
     
     

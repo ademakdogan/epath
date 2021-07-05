@@ -2,9 +2,8 @@
 from setuptools import setup, find_packages
 
 setup(
-  name = 'epath',         
-  packages = ['epath'],   
-  version = '0.1',      
+  name = 'epath',          
+  version = '0.2',      
   license='MIT',
   description = 'Easy path for python import/save/load process',   
   author = 'A.Akdogan',                   
