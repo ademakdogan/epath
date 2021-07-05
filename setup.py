@@ -1,11 +1,18 @@
 #from distutils.core import setup
 from setuptools import setup, find_packages
 
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
   name = 'epath',          
-  version = '0.6',      
+  version = '0.7',      
   license='MIT',
-  description = 'Easy path for python import/save/load process',   
+  description = 'Easy path for python import/save/load process',
+  long_description=long_description,
+  long_description_content_type='text/markdown',
   author = 'A.Akdogan',                   
   author_email = 'adem.akdogan92@gmail.com',      
   url = 'https://github.com/ademakdogan/epath',   

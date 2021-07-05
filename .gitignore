@@ -1,4 +1,7 @@
 .DS_Store
 src/__pycache__
 __pycache__
+/dist
+/epath.egg-info
+/build
 
