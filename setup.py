@@ -9,7 +9,7 @@ setup(
   description = 'Easy path for python import/save/load process',   
   author = 'A.Akdogan',                   
   author_email = 'adem.akdogan92@gmail.com',      
-  url = 'https://github.com/user/reponame',   
+  url = 'https://github.com/ademakdogan/epath',   
   #download_url = 'https://github.com/.../v_01.tar.gz', 
   keywords = ['PATH', 'ROUTE'],  
   packages = find_packages(),
