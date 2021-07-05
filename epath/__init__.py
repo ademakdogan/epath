@@ -1,1 +1,1 @@
-from epath import Path
+from epath.epath import Path

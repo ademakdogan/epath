@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
   name = 'epath',          
-  version = '0.2',      
+  version = '0.6',      
   license='MIT',
   description = 'Easy path for python import/save/load process',   
   author = 'A.Akdogan',                   

@@ -6,13 +6,14 @@
 
 import os
 import sys
+import inspect
 
 class Path:
     
     @staticmethod
     def get_base_path():
         
-        return os.path.normpath(os.path.dirname(os.path.realpath(__file__)))
+        return os.path.abspath(os.path.split(sys.argv[0])[0])
     
     @staticmethod
     def move_back(path):
@@ -27,15 +28,13 @@ class Path:
     def get(self, str_path):
         
         base_path = Path.get_base_path()
-        print(base_path)
-        route_list = str_path.split("/")
+        route_list = str_path.split(os.sep)
         for i in range(len(route_list)):
             if route_list[i] == "" or route_list[i] == ".":
                 continue
 
             if route_list[i] == "..":
                 base_path = Path.move_back(base_path)
-                print(base_path)
             elif route_list[i] == ".":
                 pass
             else:
@@ -47,10 +46,9 @@ class Path:
     def importer(self, str_path):
         
         path = self.get(str_path)
-        path_list = path.split("/")
+        path_list = path.split(os.sep)
         ext_list = path_list[len(path_list) -1].split(".")
-        new_path = self.get(str_path + "/..")
-        print(new_path)
+        new_path = self.get(str_path +  os.sep + "..")
         sys.path.insert(1, new_path)
         
         if len(ext_list) == 2:
@@ -58,7 +56,6 @@ class Path:
             package = __import__(ext_list[0])
             return getattr(package, ext_list[1])
         elif len(ext_list) == 1:
-            print(ext_list[0])
             package = __import__(ext_list[0])
 
             return package
